@@ -55,7 +55,7 @@ function FormularioCategoria() {
   return (
     <div className="container flex flex-col items-center justify-center mx-auto">
       <h1 className="text-4xl text-center my-8">
-        {id === undefined ? 'Cadastre um novo categoria' : 'Editar categoria'}
+        {id === undefined ? 'Cadastre uma nova categoria' : 'Editar categoria'}
       </h1>
 
       <form className="w-1/2 flex flex-col gap-4" onSubmit={gerarNovoCategoria}>
@@ -65,7 +65,7 @@ function FormularioCategoria() {
             type="text"
             placeholder="Nome"
             name='nome'
-            className="border-2 border-slate-700 rounded p-2"
+            className="border-2 border-green-700 rounded p-2"
             value={categoria.nome}
             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
           />
@@ -74,13 +74,13 @@ function FormularioCategoria() {
             type="text"
             placeholder="Descrição"
             name='descricao'
-            className="border-2 border-slate-700 rounded p-2"
+            className="border-2 border-green-700 rounded p-2"
             value={categoria.descricao}
             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
           />
         </div>
         <button
-          className="rounded text-slate-100 bg-slate-400 hover:bg-slate-600 w-1/2 py-2 mx-auto block"
+          className="rounded text-green-100 bg-white-400 hover:bg-white-600 w-1/2 py-2 mx-auto block"
           type="submit"
         >
           {id === undefined ? 'Cadastrar' : 'Editar'}
